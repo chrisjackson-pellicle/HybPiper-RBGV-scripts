@@ -58,7 +58,7 @@ def enrich_efficiency_bwa(bamfilename):
     if numReads == 0 or mappedReads == 0:
         return str(int(numReads)), str(int(mappedReads)), "NA"
 
-    return str(int(numReads)), str(int(mappedReads)), "{0:.3f}".format(mappedReads / numReads)
+    return str(int(numReads)), str(int(mappedReads)), "{0:.1f}".format(100 * mappedReads / numReads)
 
 
 def recovery_efficiency(name):
